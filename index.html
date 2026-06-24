@@ -875,13 +875,13 @@
     .about-section {
       max-width: 1200px;
       margin: 5rem auto 0;
-      padding: 0 2rem 6rem;
+      padding: 0 2rem 4rem;
     }
 
     .about-section .section-header-wrap {
       border-top: 1px solid #f0f0f0;
       padding-top: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     }
     .about-section .section-header-label {
       font-family: 'Inter Tight', sans-serif;
@@ -894,84 +894,52 @@
       line-height: 1;
     }
 
-    /* ─── Condensed intro card: photo + bio, side by side ─── */
-    .about-intro {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 2.5rem;
-      align-items: center;
-      border-radius: 40px;
-      border: 1px solid var(--gray-200);
-      background: #fafafa;
-      overflow: hidden;
-      padding: 0;
+    /* ─── Pull quote (centered, original styling) ─── */
+    .about-quote-block {
+      max-width: 640px;
+      margin: 0 auto 3rem;
+      text-align: center;
     }
-
-    .about-intro-photo {
-      align-self: stretch;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-    }
-    .about-intro-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 85%;
-      display: block;
-      filter: grayscale(15%);
-      transition: filter 0.5s ease, transform 0.5s cubic-bezier(0.22,1,0.36,1);
-    }
-    .about-intro-photo:hover img {
-      filter: grayscale(0%);
-      transform: scale(1.025);
-    }
-
-    .about-intro-text {
-      padding: 2.2rem 2.5rem 2.2rem 0;
-    }
-
-    .about-intro-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.12em;
-      text-transform: lowercase;
-      color: var(--gray-400);
-      margin-bottom: 0.9rem;
-    }
-
-    .about-intro-bio {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: #1a1a1a;
-      max-width: 46ch;
-      margin-bottom: 1.5rem;
-    }
-
-    .about-intro-quote {
+    .about-quote-text {
       font-family: 'Playfair Display', serif;
       font-style: italic;
-      font-size: 0.95rem;
-      color: var(--gray-600);
-      margin-bottom: 1.6rem;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      color: var(--black);
+      line-height: 1.35;
+      margin: 0;
     }
-    .about-intro-quote-attr {
-      display: block;
-      font-family: 'JetBrains Mono', monospace;
+    .about-quote-attr {
+      font-size: 0.75rem;
       font-style: normal;
-      font-size: 0.68rem;
-      letter-spacing: 0.06em;
       color: var(--gray-400);
+      display: block;
       margin-top: 0.4rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
+    /* ─── Intro: centered bio ─── */
+    .about-intro {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-    @media (max-width: 700px) {
-      .about-intro {
-        grid-template-columns: 1fr;
-      }
-      .about-intro-photo { aspect-ratio: 16 / 10; }
-      .about-intro-text { padding: 1.6rem 1.6rem 2rem; }
+    .about-intro-greeting {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.5;
+      color: #1a1a1a;
+      margin-bottom: 1.1rem;
+    }
+    .about-intro-bio {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 1.02rem;
+      line-height: 1.65;
+      color: var(--gray-600);
+      margin: 0 auto;
     }
   </style>
 
@@ -979,20 +947,18 @@
     <p class="section-header-label">About</p>
   </div>
 
+  <div class="about-quote-block">
+    <p class="about-quote-text">
+      "Everything you can imagine is real."
+    </p>
+    <span class="about-quote-attr">— Pablo Picasso</span>
+  </div>
+
   <div class="about-intro">
-    <div class="about-intro-photo">
-      <img src="IMG_3268_edited.png" alt="Parisa at the Golden Gate Bridge" />
-    </div>
-    <div class="about-intro-text">
-      <p class="about-intro-eyebrow">// quick intro</p>
-      <p class="about-intro-bio">
-        I'm Parisa — a UC Berkeley Cognitive Science &amp; Data Science student who loves turning ideas into real products, from B@B Coin to Parent2Parent. Outside of building, you'll find me at the gym, deep in a Survivor episode, or trying to finish my reading list.
-      </p>
-      <p class="about-intro-quote">
-        "Everything you can imagine is real."
-        <span class="about-intro-quote-attr">— Pablo Picasso</span>
-      </p>
-    </div>
+    <p class="about-intro-greeting">Hi, I'm Parisa — a builder at heart, always turning ideas into real products.</p>
+    <p class="about-intro-bio">
+      I'm a UC Berkeley Cognitive Science &amp; Data Science graduate who loves creating new things, from designing apps to producing music. You can find me watching the World Cup, working out at [solidcore], or listening to music. 
+    </p>
   </div>
 
 </section>
