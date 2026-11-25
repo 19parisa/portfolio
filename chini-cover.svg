@@ -1,0 +1,151 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="bgC" cx="50%" cy="45%" r="80%">
+      <stop offset="0%" stop-color="#8cc0d2"/>
+      <stop offset="100%" stop-color="#74adc1"/>
+    </radialGradient>
+    <radialGradient id="vigC" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#3f7589" stop-opacity="0.22"/>
+    </radialGradient>
+    <radialGradient id="glowC" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beeBody" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#f8e08e"/>
+      <stop offset="55%" stop-color="#e8b43f"/>
+      <stop offset="100%" stop-color="#b8821e"/>
+    </linearGradient>
+    <linearGradient id="beeDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6a4a1c"/>
+      <stop offset="100%" stop-color="#3e2a0e"/>
+    </linearGradient>
+    <linearGradient id="beeWing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#d6ebf3" stop-opacity="0.45"/>
+    </linearGradient>
+    <clipPath id="bodyClip">
+      <ellipse cx="0" cy="0" rx="95" ry="64"/>
+    </clipPath>
+    <filter id="beeShadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#1f4a5c" flood-opacity="0.28"/>
+    </filter>
+    <filter id="beeShadowS" x="-40%" y="-40%" width="180%" height="190%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1f4a5c" flood-opacity="0.26"/>
+    </filter>
+
+    <!-- Bee, centred on (0,0), facing left -->
+    <g id="bee">
+      <!-- Wings (behind body) -->
+      <ellipse cx="-8" cy="-74" rx="40" ry="66" transform="rotate(-22 -8 -74)" fill="url(#beeWing)" stroke="#ffffff" stroke-width="1.6" stroke-opacity="0.75"/>
+      <ellipse cx="38" cy="-72" rx="34" ry="56" transform="rotate(18 38 -72)" fill="url(#beeWing)" stroke="#ffffff" stroke-width="1.6" stroke-opacity="0.75"/>
+      <path d="M-10,-120 Q-12,-84 -4,-44" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.55"/>
+      <path d="M40,-112 Q38,-84 36,-48" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.55"/>
+
+      <!-- Stinger -->
+      <path d="M92,-9 L120,0 L92,9 Z" fill="url(#beeDark)"/>
+
+      <!-- Body -->
+      <ellipse cx="0" cy="0" rx="95" ry="64" fill="url(#beeBody)"/>
+      <!-- Stripes -->
+      <g clip-path="url(#bodyClip)" fill="url(#beeDark)" opacity="0.92">
+        <path d="M-36,-70 Q-18,0 -36,70 L-14,70 Q4,0 -14,-70 Z"/>
+        <path d="M16,-70 Q34,0 16,70 L38,70 Q56,0 38,-70 Z"/>
+        <path d="M66,-70 Q84,0 66,70 L96,70 L96,-70 Z"/>
+      </g>
+      <!-- Body highlight -->
+      <path d="M-70,-34 Q-40,-56 -6,-56" fill="none" stroke="#fff8e0" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+      <ellipse cx="0" cy="0" rx="95" ry="64" fill="none" stroke="#fbeaa8" stroke-width="1.5" opacity="0.35"/>
+
+      <!-- Head -->
+      <circle cx="-92" cy="-4" r="36" fill="url(#beeDark)"/>
+      <circle cx="-103" cy="-12" r="8" fill="#fff8e0"/>
+      <circle cx="-105" cy="-14" r="3" fill="#ffffff"/>
+      <path d="M-112,12 Q-98,22 -84,14" fill="none" stroke="#fff8e0" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+      <!-- Antennae -->
+      <g fill="none" stroke="#3e2a0e" stroke-width="3" stroke-linecap="round">
+        <path d="M-104,-36 Q-118,-66 -102,-84"/>
+        <path d="M-86,-38 Q-84,-70 -64,-82"/>
+      </g>
+      <circle cx="-102" cy="-85" r="5" fill="#3e2a0e"/>
+      <circle cx="-63" cy="-83" r="5" fill="#3e2a0e"/>
+    </g>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgC)"/>
+  <rect width="800" height="500" fill="url(#vigC)"/>
+
+  <!-- Honeycomb outlines -->
+  <g fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.22">
+    <polygon points="80,44 110,26 140,44 140,80 110,98 80,80"/>
+    <polygon points="140,44 170,26 200,44 200,80 170,98 140,80"/>
+    <polygon points="50,98 80,80 110,98 110,134 80,152 50,134"/>
+    <polygon points="110,98 140,80 170,98 170,134 140,152 110,134"/>
+    <polygon points="80,152 110,134 140,152 140,188 110,206 80,188"/>
+    <polygon points="600,44 630,26 660,44 660,80 630,98 600,80"/>
+    <polygon points="660,44 690,26 720,44 720,80 690,98 660,80"/>
+    <polygon points="720,44 750,26 780,44 780,80 750,98 720,80"/>
+    <polygon points="630,98 660,80 690,98 690,134 660,152 630,134"/>
+    <polygon points="690,98 720,80 750,98 750,134 720,152 690,134"/>
+    <polygon points="50,340 80,322 110,340 110,376 80,394 50,376"/>
+    <polygon points="110,340 140,322 170,340 170,376 140,394 110,376"/>
+    <polygon points="80,394 110,376 140,394 140,430 110,448 80,430"/>
+    <polygon points="630,340 660,322 690,340 690,376 660,394 630,376"/>
+    <polygon points="690,340 720,322 750,340 750,376 720,394 690,376"/>
+    <polygon points="660,394 690,376 720,394 720,430 690,448 660,430"/>
+    <polygon points="720,394 750,376 780,394 780,430 750,448 720,430"/>
+  </g>
+
+  <!-- Honey-yellow filled cells -->
+  <g fill="#f7d86a" opacity="0.40">
+    <polygon points="110,98 140,80 170,98 170,134 140,152 110,134"/>
+    <polygon points="690,98 720,80 750,98 750,134 720,152 690,134"/>
+    <polygon points="690,394 720,376 750,394 750,430 720,448 690,430" opacity="0.8"/>
+  </g>
+
+  <!-- Dashed connectors + nodes -->
+  <g stroke="#ffffff" stroke-width="1" fill="none" stroke-dasharray="5 7" opacity="0.5">
+    <line x1="140" y1="152" x2="290" y2="236"/>
+    <line x1="720" y1="152" x2="520" y2="236"/>
+    <line x1="110" y1="340" x2="280" y2="290"/>
+    <line x1="690" y1="340" x2="520" y2="290"/>
+  </g>
+  <g fill="#ffffff" opacity="0.85">
+    <circle cx="140" cy="152" r="5"/>
+    <circle cx="140" cy="152" r="9" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+    <circle cx="720" cy="152" r="5"/>
+    <circle cx="720" cy="152" r="9" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+    <circle cx="110" cy="340" r="4"/>
+    <circle cx="690" cy="340" r="4"/>
+  </g>
+
+  <!-- Soft glow behind bee -->
+  <ellipse cx="400" cy="250" rx="230" ry="175" fill="url(#glowC)"/>
+
+  <!-- Flight trail -->
+  <path d="M575,392 C620,360 628,328 604,306" fill="none" stroke="#ffffff" stroke-width="1.4" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="408" cy="396" rx="78" ry="8" fill="#1f4a5c" opacity="0.16"/>
+
+  <!-- Main bee -->
+  <g transform="translate(410 262) rotate(-6) scale(0.98)" filter="url(#beeShadow)">
+    <use href="#bee" xlink:href="#bee"/>
+  </g>
+
+  <!-- Small second bee -->
+  <g transform="translate(580 318) rotate(8) scale(-0.32 0.32)" filter="url(#beeShadowS)">
+    <use href="#bee" xlink:href="#bee"/>
+  </g>
+
+  <!-- Dots -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="300" cy="120" r="2.5"/>
+    <circle cx="510" cy="104" r="1.8"/>
+    <circle cx="238" cy="236" r="2"/>
+    <circle cx="310" cy="440" r="2"/>
+    <circle cx="510" cy="448" r="1.8"/>
+  </g>
+</svg>
